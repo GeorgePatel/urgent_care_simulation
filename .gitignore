@@ -11,7 +11,6 @@
 *.tmp
 
 # Ignore simulation output txt file
-bin/simulationOut.txt
 
 
 # Ignore output files from your simulation
@@ -31,7 +30,6 @@ out/
 .settings
 .springBeans
 .sts4-cache
-bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
