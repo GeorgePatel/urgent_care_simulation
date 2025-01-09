@@ -1,0 +1,116 @@
+@startuml
+class Room {
+    - String roomName
+    - boolean occupied
+    - int totalOccupiedTime
+    - Patient currentPatient
+    - Staff currentStaff
+    - ServiceType currentServiceType
+    + Room(String)
+    + getRoomName(): String
+    + setRoomName(String): void
+    + isOccupied(): boolean
+    + setOccupied(boolean): void
+    + getTotalOccupiedTime(): int
+    + setTotalOccupiedTime(int): void
+    + getCurrentPatient(): Patient
+    + setCurrentPatient(Patient): void
+    + getCurrentStaff(): Staff
+    + setCurrentStaff(Staff): void
+    + getCurrentServiceType(): ServiceType
+    + setCurrentServiceType(ServiceType): void
+}
+
+class Patient {
+    - String name
+    - int arrivalTime
+    - int serviceStartTime
+    - ServiceType serviceType;
+    + Patient(String, int)
+    + getName(): String
+    + getArrivalTime(): int
+    + getServiceStartTime(): int
+    + setServiceStartTime(int): void
+    + getBeingServedBy(): String
+    + setBeingServedBy(String): void
+}
+
+class Staff {
+    - String name
+    - int timeToServe
+    - boolean working
+    - int totalWorkedTime
+    - int currentCycleTime
+    - ServiceType serviceType
+    + Staff(String, int, ServiceType)
+    + getName(): String
+    + getTimeToServe(): int
+    + isWorking(): boolean
+    + setWorking(boolean): void
+    + getTotalWorkedTime(): int
+    + setTotalWorkedTime(int): void
+    + getCurrentCycleTime(): int
+    + setCurrentCycleTime(int): void
+    + getServiceType(): ServiceType
+    + setServiceType(ServiceType): void
+}
+
+enum ServiceType {
+    DOCTOR
+    NURSE
+    AA
+    COMPLETE
+}
+
+class Node<T> {
+    - T data
+    - Node<T> link
+    + Node(T)
+    + Node(T, Node<T>)
+    + getData(): T
+    + setData(T): void
+    + getLink(): Node<T>
+    + setLink(Node<T>): void
+    + addNodeAfter(T): void
+    + listCopyWithTail(Node<T>): Object[]
+    + contains(Node<T>, T): boolean
+    + listSearch(Node<T>, T): Node<T>
+}
+
+class ListIterator<E> {
+    - Node<E> list
+    + ListIterator(Node<E>)
+    + hasNext(): boolean
+    + next(): E
+}
+
+class Stack<E> {
+    - Node<E> top
+    - int length
+    + Stack()
+    + isEmpty(): boolean
+    + peek(): E
+    + push(E): void
+    + pop(): E
+    + getLength(): int
+    + getTop(): Node<E>
+    + setTop(Node<E>): void
+    + clone(): Stack<E>
+}
+
+class Queue<E> {
+    - Node<E> front
+    - Node<E> rear
+    - int numOfElements
+    + Queue()
+    + add(E): void
+    + remove(): E
+    + isEmpty(): boolean
+    + size(): int
+    + clone(): Queue<E>
+    + peekFront(): E
+    + getFront(): Node<E>
+    + peekRear(): E
+    + removeUntil(E): int
+}
+@enduml

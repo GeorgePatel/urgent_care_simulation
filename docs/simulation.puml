@@ -1,0 +1,40 @@
+@startuml
+start
+:Patient arrives at the facility;
+if (Patient assigned to a priority queue?) then (Yes)
+    :Patient enters priority queue;
+else (No)
+    stop
+endif
+
+while (Patient available in queue) is (Yes)
+    if (Nurse available and Room available?) then (Yes)
+        :Assign Nurse and Room to Patient;
+        :Nurse starts serving the Patient;
+    else (No)
+        :Patient waits in queue;
+    endif
+endwhile
+
+:After Nurse finishes;
+if (Doctor available?) then (Yes)
+    :Assign Doctor to Room;
+    :Doctor starts serving the Patient;
+else (No)
+    :Patient waits in room for Doctor;
+endif
+
+:After Doctor finishes;
+:Patient moves to checkout queue;
+
+while (Admin Assistant available and Patient in checkout queue) is (Yes)
+    :Assign Admin Assistant to Patient;
+    :Admin Assistant starts serving Patient;
+    :Patient being checked out;
+endwhile
+
+:Patient leaves facility after checkout;
+:Write current state to simulationOut.txt;
+
+stop
+@enduml
