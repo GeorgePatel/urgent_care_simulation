@@ -2,7 +2,7 @@ import java.io.*;
 
 public class SimulationOutputFormatter {
 
-    private static final String fileName = "bin/simulationOut.txt"; // stores current status of Urgent Care
+    private static final String fileName = "frontend/simulationOut.txt"; // stores current status of Urgent Care
     private static PrintWriter printWriter;
 
     static void printToFile() throws FileNotFoundException {
