@@ -2,7 +2,7 @@
   "name": "react-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://georgepatel.github.io/urgent_care_simulation/docs/react-build",
+  "homepage": "https://georgepatel.github.io/urgent_care_simulation/react-build",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
