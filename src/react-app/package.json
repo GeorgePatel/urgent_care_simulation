@@ -2,7 +2,7 @@
   "name": "react-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://georgepatel.github.io/urgent_care_simulation/src/react-build",
+  "homepage": "https://georgepatel.github.io/urgent_care_simulation/docs/react-build",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && rm -rf ../react-build/* && mv build/* ../react-build/",
+    "build": "react-scripts build && rm -rf ../../docs/react-build/* && mv build/* ../../docs/react-build/",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "npm run build && gh-pages -d ../docs"
