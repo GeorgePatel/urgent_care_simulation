@@ -1,0 +1,47 @@
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml
+
+# Ignore build and compiled files
+/build/
+*.class
+
+# Ignore temporary or log files
+*.log
+*.tmp
+
+# Ignore simulation script
+bin/simulation.sh
+
+# Ignore output files from your simulation
+simulationFlow.txt
+simulationOut.txt
+
+### IntelliJ IDEA ###
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
