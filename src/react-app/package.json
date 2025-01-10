@@ -15,7 +15,8 @@
     "build": "react-scripts build && rm -rf ../../docs/react-build/* && mv build/* ../../docs/react-build/",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && gh-pages -d ../docs"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d ../../docs/react-build"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
