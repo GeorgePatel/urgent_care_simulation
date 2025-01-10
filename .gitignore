@@ -10,8 +10,8 @@
 *.log
 *.tmp
 
-# Ignore simulation output txt file
-
+# Ignore simulation script
+bin/simulation.sh
 
 # Ignore output files from your simulation
 simulationFlow.txt
